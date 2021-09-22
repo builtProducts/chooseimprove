@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production node server.js",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack --mode=production",
     "build": "NODE_ENV=production webpack",
     "dev": "NODE_ENV=development webpack serve"
   },
@@ -17,7 +21,9 @@
   "license": "ISC",
   "dependencies": {
     "airtable": "^0.10.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "node": "14.16.0",
     "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -33,7 +39,7 @@
     "react-fontawesome": "^1.7.1",
     "url-loader": "^4.1.1",
     "webpack": "^4.43.0",
-    "webpack-cli": "^4.3.0",
+    "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.0"
   }
 }
